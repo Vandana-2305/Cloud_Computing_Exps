@@ -1,0 +1,92 @@
+# EXPERIMENT 01 - VIRTUAL WORKSTATION
+
+## SETUP REQUIREMENTS
+
+1. Host Operating System
+
+   * Windows 8 or above
+   * Experiment demonstrated using Windows 10
+
+2. Virtualization Software
+
+   * Oracle VM VirtualBox
+   * VMware or equivalent open-source cloud workstation can also be used
+
+3. Guest Operating System
+
+   * Windows or Linux
+   * Experiment demonstrated using Windows 98
+
+4. ISO Image
+
+   * ISO image of the Guest Operating System
+   * The ISO image is required while creating the Virtual Machine
+
+5. Hardware Configuration
+
+   * Base Memory: 512 MB
+   * Processor: 1 CPU
+   * Virtual Hard Disk: 2.00 GB
+
+6. Network Requirements
+
+   * Internet connection for downloading the virtualization software
+   * Internet browser for accessing the VirtualBox download page
+
+## VIRTUALBOX INSTALLATION SETUP
+
+1. Download Oracle VM VirtualBox from:
+   https://www.virtualbox.org/wiki/Downloads
+
+2. Select:
+   Windows Hosts
+
+3. Run the downloaded VirtualBox .exe setup file.
+
+4. Follow the installation wizard:
+
+   * Click Next
+   * Select installation folder
+   * Select required features
+   * Allow VirtualBox network interfaces
+   * Click Install
+   * Click Finish
+
+## VIRTUAL MACHINE SETUP
+
+1. Open Oracle VM VirtualBox.
+
+2. Click New.
+
+3. Configure the Virtual Machine:
+
+   Name       : Guest OS name
+   ISO Image  : Guest OS ISO file
+   Type       : Linux / Windows / Mac
+   Version    : Appropriate OS version
+   RAM        : 512 MB
+   CPU        : 1
+   Disk       : 2.00 GB
+
+4. Review the configuration.
+
+5. Click Finish.
+
+6. Select the created Virtual Machine.
+
+7. Click Start.
+
+8. Follow the Guest Operating System installation wizard.
+
+9. Complete the installation and verify that the Guest OS boots successfully.
+
+## FINAL SETUP
+
+Host OS        : Windows 10
+Virtualization : Oracle VM VirtualBox
+Guest OS       : Windows 98
+Base Memory    : 512 MB
+Processor      : 1 CPU
+Disk Size      : 2.00 GB
+
+Status         : Virtual Machine configured successfully.
