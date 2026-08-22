@@ -1,0 +1,95 @@
+# EXPERIMENT 02 - VIRTUAL MACHINE – C COMPILER
+
+## SETUP REQUIREMENTS
+
+1. Virtualization Software
+
+   * VMware Player / VMware Workstation
+   * VirtualBox can also be used
+
+2. Guest Operating System
+
+   * CorePlus Virtual Machine
+
+3. C Compiler
+
+   * GCC / C Compiler
+   * compiletc package
+
+4. Terminal
+
+   * Terminal available inside the Guest Operating System
+
+## VIRTUAL MACHINE SETUP
+
+1. Install VMware Player.
+
+2. Create or host the CorePlus Virtual Machine.
+
+3. Open VMware Workstation.
+
+4. Power on the Virtual Machine.
+
+5. Wait for the Guest Operating System to load.
+
+## C COMPILER SETUP
+
+1. Open the Terminal inside the Guest Operating System.
+
+2. Install the C compiler and required libraries using:
+
+   tce-load -wi compiletc
+
+3. Wait for the compiler and required libraries to finish
+   downloading and installing.
+
+4. Verify that the terminal returns to the command prompt after
+   installation.
+
+## C PROGRAM SETUP
+
+1. Open the terminal.
+
+2. Open the text editor using:
+
+   sudo editor
+
+3. Enter the required C program.
+
+4. Save the program with a .c extension.
+
+   Example:
+   demo.c
+
+5. Exit the editor using:
+
+   CTRL + Q
+
+6. Compile the C program using:
+
+   cc demo.c
+
+7. Execute the compiled program using:
+
+   ./a.out
+
+## COMMANDS USED
+
+tce-load -wi compiletc
+
+sudo editor
+
+cc demo.c
+
+./a.out
+
+## FINAL SETUP
+
+Virtualization : VMware / VirtualBox
+Guest OS        : CorePlus
+Compiler        : GCC / C Compiler
+Source File     : .c
+Compile Command : cc filename.c
+Run Command     : ./a.out
+
+Status          : C compiler installed and configured successfully.
