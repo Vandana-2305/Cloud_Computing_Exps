@@ -1,0 +1,149 @@
+# EXPERIMENT 03 - GOOGLE APP ENGINE
+
+## SETUP REQUIREMENTS
+
+1. Google App Engine
+2. Google Plugin for Eclipse
+3. Eclipse IDE
+4. Google App Engine Java SDK
+5. Java / Python
+6. Google Account
+7. Internet Connection
+8. Web Browser
+
+## GOOGLE APP ENGINE SETUP
+
+1. Install the Google Plugin for Eclipse.
+
+2. Install the Google App Engine Java SDK along with the
+   Google Plugin for Eclipse.
+
+3. If the SDK is not installed with the plugin:
+
+   * Download the Google App Engine Java SDK.
+   * Extract the SDK files.
+
+4. Open Eclipse IDE.
+
+## WEB APPLICATION PROJECT SETUP
+
+1. Open Eclipse.
+
+2. Click the Google icon in the Eclipse toolbar.
+
+3. Select:
+
+   New Web Application Project
+
+4. Configure the Web Application Project.
+
+5. Link the Google App Engine Java SDK using:
+
+   Configure SDK
+
+6. Click Finish.
+
+7. The Google Plugin for Eclipse generates a sample project.
+
+## PROJECT STRUCTURE
+
+HelloWorld/
+│
+├── src/
+│   └── Java source code
+│
+├── META-INF/
+│   └── Configuration files
+│
+└── war/
+├── JSP files
+├── Images
+├── Data files
+│
+└── WEB-INF/
+├── Application configuration
+├── lib/
+│   └── JAR libraries
+└── classes/
+└── Compiled classes
+
+## APP ENGINE CONFIGURATION
+
+The project must contain:
+
+```
+appengine-web.xml
+```
+
+Example configuration:
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<appengine-web-app
+ xmlns="http://appengine.google.com/ns/1.0">
+
+```
+<application></application>
+<version>1</version>
+
+<system-properties>
+    <property
+        name="java.util.logging.config.file"
+        value="WEB-INF/logging.properties"/>
+</system-properties>
+```
+
+</appengine-web-app>
+
+## LOCAL SERVER SETUP
+
+1. Right-click the project in Eclipse.
+
+2. Select:
+
+   Run As → Web Application
+
+3. Start the local development server.
+
+4. Open the application in a web browser:
+
+   http://localhost:8888/
+
+5. The Hello World servlet can be accessed using:
+
+   http://localhost:8888/helloworld
+
+## DEPLOYMENT SETUP
+
+1. Register or sign in with a Google account.
+
+2. Create an application ID for the web application.
+
+3. Add the application ID to the appengine-web.xml file.
+
+Example:
+
+```
+<application>YOUR_APPLICATION_ID</application>
+```
+
+4. Click the GAE Deploy button in Eclipse.
+
+5. Sign in with the Google account.
+
+6. Click Deploy.
+
+7. Verify that the web application is successfully deployed.
+
+## FINAL SETUP
+
+IDE              : Eclipse
+Platform         : Google App Engine
+SDK              : Google App Engine Java SDK
+Application      : Hello World
+Configuration    : appengine-web.xml
+Local Server     : localhost:8888
+Deployment       : Google App Engine
+
+Status           : Google App Engine and the Hello World web
+application configured successfully.
