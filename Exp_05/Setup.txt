@@ -1,0 +1,149 @@
+# EXPERIMENT 05 - CLOUDSIM
+
+## SETUP REQUIREMENTS
+
+1. Operating System
+
+   * Windows 64-bit
+
+2. IDE
+
+   * Eclipse IDE for Java Developers
+
+3. Cloud Simulation Tool
+
+   * CloudSim 3.0.3
+
+4. Supporting Library
+
+   * Apache Commons Math 3.6.1
+
+5. Programming Language
+
+   * Java
+
+## ECLIPSE SETUP
+
+1. Download Eclipse IDE for Java Developers.
+
+2. Select the appropriate Windows 64-bit version.
+
+3. Extract the downloaded Eclipse package.
+
+4. Open:
+
+   Eclipse.exe
+
+## CLOUDSIM SETUP
+
+1. Download CloudSim 3.0.3.
+
+2. Extract the CloudSim project files.
+
+3. Open Eclipse.
+
+4. Navigate to:
+
+   File → New → Project
+
+5. Select:
+
+   Java Project
+
+6. Click Next.
+
+7. Enter the project name:
+
+   CloudSim
+
+8. Unselect:
+
+   Use default location
+
+9. Browse to the directory where CloudSim has been extracted.
+
+10. Click Next.
+
+## APACHE COMMONS MATH SETUP
+
+1. Download Apache Commons Math 3.6.1.
+
+2. Extract the downloaded package.
+
+3. In the Eclipse project, open the:
+
+   Libraries
+
+   tab.
+
+4. Check whether the following JAR file is available:
+
+   commons-math3-3.x.jar
+
+5. If it is not available, click:
+
+   Add External JARs
+
+6. Browse to the extracted Apache Commons Math directory.
+
+7. Select:
+
+   commons-math3-3.x.jar
+
+8. Click Open.
+
+9. Verify that the JAR appears in the Libraries list.
+
+10. Click Finish.
+
+## CLOUDSIM PROJECT CONFIGURATION
+
+After configuring the project:
+
+1. Open Project Explorer.
+
+2. Verify the CloudSim project structure.
+
+3. Ensure that folders such as the following are available:
+
+   bin/
+   docs/
+   examples/
+
+4. Allow Eclipse to build the CloudSim project.
+
+## EXAMPLE SETUP
+
+1. Navigate to:
+
+   examples
+
+2. Expand:
+
+   org.cloudbus.cloudsim.examples
+
+3. Open:
+
+   CloudsimExample1.java
+
+## RUN CONFIGURATION
+
+Run the CloudSim example using:
+
+Run → Run
+
+or use the keyboard shortcut:
+
+Ctrl + F11
+
+## EXPECTED SETUP
+
+IDE              : Eclipse
+Project          : CloudSim
+CloudSim Version : 3.0.3
+Library          : Apache Commons Math 3.6.1
+Language         : Java
+Example          : CloudsimExample1.java
+Platform         : Windows 64-bit
+
+Status           : CloudSim environment configured successfully.
