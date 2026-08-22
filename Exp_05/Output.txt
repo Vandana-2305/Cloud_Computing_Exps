@@ -1,0 +1,24 @@
+# EXPERIMENT 05 - CLOUDSIM
+
+## OUTPUT
+
+The Eclipse environment was configured successfully.
+
+The CloudSim 3.0.3 project was imported into Eclipse successfully.
+
+The Apache Commons Math library was added to the project successfully.
+
+The CloudSim example program:
+
+```
+CloudsimExample1.java
+```
+
+was opened and executed successfully.
+
+The simulation output was displayed in the Eclipse Console.
+
+## RESULT
+
+Thus, the cloud scenario was simulated successfully using the
+CloudSim framework in the Eclipse environment.
