@@ -1,0 +1,77 @@
+EXPERIMENT 09: RUN A CONTAINER FROM DOCKER HUB
+
+# SETUP REQUIREMENTS
+
+1. Install Docker on the system.
+
+2. Verify that Docker is installed correctly:
+
+   docker --version
+
+3. Verify Docker command-line options:
+
+   docker -h
+
+4. Ensure that the system has an active internet connection so that Docker can download images from Docker Hub.
+
+5. Docker Hub is used as the source for the container image.
+
+6. The experiment uses the Ubuntu image available on Docker Hub.
+
+7. Pull the Ubuntu image manually if required:
+
+   docker pull ubuntu
+
+8. Verify that the image has been downloaded:
+
+   docker image ls
+
+# RUNNING THE CONTAINER
+
+Run the Ubuntu container using:
+
+docker container run -it ubuntu top
+
+The command downloads the ubuntu:latest image from Docker Hub if it is not available locally and then starts the container.
+
+# VERIFY CONTAINER
+
+List the running containers:
+
+docker container ls
+
+List all containers:
+
+docker ps -a
+
+# CONTAINER MANAGEMENT
+
+Stop a container:
+
+docker stop [container_name]
+
+Remove a stopped container:
+
+docker rm [container_name]
+
+Display container logs:
+
+docker logs [container_name]
+
+# IMAGE MANAGEMENT
+
+List Docker images:
+
+docker image ls
+
+Remove a Docker image:
+
+docker image rm [image_name]
+
+# EXPECTED SETUP
+
+Docker should be installed and running successfully.
+
+The Ubuntu image should be available locally after executing the container command.
+
+A container should be created from the Ubuntu image and started successfully.
