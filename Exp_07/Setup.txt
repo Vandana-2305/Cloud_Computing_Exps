@@ -1,0 +1,226 @@
+# EXPERIMENT 07 - HADOOP SINGLE NODE CLUSTER
+
+## SETUP REQUIREMENTS
+
+1. Operating System
+
+   * Ubuntu / Linux
+
+2. Java
+
+   * Java 1.7
+   * OpenJDK
+
+3. SSH
+
+   * OpenSSH Server
+
+4. Hadoop
+
+   * Hadoop 2.7.0
+
+5. Terminal
+
+   * Linux Terminal
+
+## JAVA SETUP
+
+1. Update the package repository:
+
+   sudo apt-get update
+
+2. Install Java JDK:
+
+   sudo apt-get install openjdk-7-jdk
+
+3. Install Java JRE:
+
+   sudo apt-get install openjdk-7-jre
+
+4. Verify Java:
+
+   java -version
+
+## SSH SETUP
+
+1. Install OpenSSH Server:
+
+   apt-get install openssh-server
+
+2. Generate an RSA SSH key:
+
+   ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
+
+3. Add the public key to authorized keys:
+
+   cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+
+## HADOOP USER SETUP
+
+1. Create the Hadoop group:
+
+   sudo addgroup hadoop
+
+2. Create the Hadoop user:
+
+   sudo adduser --ingroup hadoop hadoop
+
+## HADOOP INSTALLATION
+
+1. Copy the Hadoop archive:
+
+   hadoop-2.7.0.tar.gz
+
+2. Extract Hadoop:
+
+   sudo tar -xzvf hadoop-2.7.0.tar.gz -C /usr/local/lib/
+
+3. Change ownership:
+
+   sudo chown -R hadoop:hadoop /usr/local/lib/hadoop-2.7.0
+
+## HDFS DIRECTORY SETUP
+
+1. Create the NameNode directory:
+
+   sudo mkdir -p /var/lib/hadoop/hdfs/namenode
+
+2. Create the DataNode directory:
+
+   sudo mkdir -p /var/lib/hadoop/hdfs/datanode
+
+3. Change ownership:
+
+   sudo chown -R hadoop /var/lib/hadoop
+
+## JAVA HOME SETUP
+
+1. Find the Java installation path:
+
+   readlink -f /usr/bin/java
+
+2. Configure JAVA_HOME in ~/.bashrc:
+
+   export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+
+3. Configure Hadoop:
+
+   export HADOOP_INSTALL=/usr/local/lib/hadoop-2.7.0
+   export PATH=$PATH:$HADOOP_INSTALL/bin
+   export PATH=$PATH:$HADOOP_INSTALL/sbin
+   export HADOOP_MAPRED_HOME=$HADOOP_INSTALL
+   export HADOOP_COMMON_HOME=$HADOOP_INSTALL
+   export HADOOP_HDFS_HOME=$HADOOP_INSTALL
+   export YARN_HOME=$HADOOP_INSTALL
+
+4. Reload the configuration:
+
+   source ~/.bashrc
+
+## HADOOP ENVIRONMENT SETUP
+
+Edit:
+
+/usr/local/lib/hadoop-2.7.0/etc/hadoop/hadoop-env.sh
+
+Set:
+
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+
+## CORE-SITE.XML SETUP
+
+Edit:
+
+/usr/local/lib/hadoop-2.7.0/etc/hadoop/core-site.xml
+
+Configuration:
+
+   <configuration>
+       <property>
+           <name>fs.default.name</name>
+           <value>hdfs://localhost:9000</value>
+       </property>
+   </configuration>
+
+## YARN-SITE.XML SETUP
+
+Edit:
+
+/usr/local/lib/hadoop-2.7.0/etc/hadoop/yarn-site.xml
+
+Configuration:
+
+   <configuration>
+       <property>
+           <name>yarn.nodemanager.aux-services</name>
+           <value>mapreduce_shuffle</value>
+       </property>
+
+```
+   <property>
+       <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+       <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+   </property>
+```
+
+   </configuration>
+
+## MAPRED-SITE.XML SETUP
+
+Create the configuration file:
+
+cp mapred-site.xml.template mapred-site.xml
+
+Edit:
+
+mapred-site.xml
+
+Configuration:
+
+   <configuration>
+       <property>
+           <name>mapreduce.framework.name</name>
+           <value>yarn</value>
+       </property>
+   </configuration>
+
+## HDFS-SITE.XML SETUP
+
+Edit:
+
+/usr/local/lib/hadoop-2.7.0/etc/hadoop/hdfs-site.xml
+
+Configuration:
+
+   <configuration>
+       <property>
+           <name>dfs.replication</name>
+           <value>1</value>
+       </property>
+
+```
+   <property>
+       <name>dfs.namenode.name.dir</name>
+       <value>file:/var/lib/hadoop/hdfs/namenode</value>
+   </property>
+
+   <property>
+       <name>dfs.datanode.data.dir</name>
+       <value>file:/var/lib/hadoop/hdfs/datanode</value>
+   </property>
+```
+
+   </configuration>
+
+## FINAL SETUP
+
+Hadoop Version     : 2.7.0
+Java Version       : 1.7
+File System        : HDFS
+Resource Manager   : YARN
+Processing Model   : MapReduce
+NameNode Directory : /var/lib/hadoop/hdfs/namenode
+DataNode Directory : /var/lib/hadoop/hdfs/datanode
+Replication Factor : 1
+
+Status             : Hadoop Single Node Cluster setup completed.
