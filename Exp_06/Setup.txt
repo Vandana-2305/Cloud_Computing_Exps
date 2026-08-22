@@ -1,0 +1,129 @@
+# EXPERIMENT 06 - FILE TRANSFER BETWEEN VIRTUAL MACHINES
+
+## SETUP REQUIREMENTS
+
+1. Virtualization Software
+
+   * Oracle VM VirtualBox
+
+2. Virtual Machines
+
+   * Source Virtual Machine
+   * Destination Virtual Machine
+
+3. VirtualBox Guest Additions
+
+   * Required for Shared Folders
+
+4. USB Drive
+
+   * Optional method for file transfer
+
+5. Host Operating System
+
+   * Required for creating and accessing shared folders
+
+## METHOD 1 - COPY AND PASTE / DRAG AND DROP
+
+1. Start the Virtual Machine.
+
+2. Open VirtualBox.
+
+3. Select:
+
+   Devices → Drag and Drop
+
+4. Choose the required option:
+
+   Host to Guest
+   Guest to Host
+   Bidirectional
+   Disabled
+
+5. Select:
+
+   Bidirectional
+
+   for transferring files in both directions.
+
+## METHOD 2 - USB DRIVE
+
+1. Enable USB access in VirtualBox.
+
+2. Install the VirtualBox Extension Pack if required.
+
+3. Insert the USB drive.
+
+4. Open VirtualBox.
+
+5. Navigate to:
+
+   File → Preferences → Extensions
+
+6. Click the + button.
+
+7. Browse to the downloaded Extension Pack.
+
+8. Select Open.
+
+9. Complete the installation.
+
+10. Verify USB access under:
+
+    Settings → USB
+
+## METHOD 3 - SHARED FOLDER
+
+1. Install VirtualBox Guest Additions inside the Guest OS.
+
+2. From the VirtualBox menu, select:
+
+   Devices → Install Guest Additions
+
+3. Complete the Guest Additions installation.
+
+4. Open:
+
+   Devices → Shared Folders → Shared Folders Settings
+
+5. Click the + button.
+
+6. Under Folder Path, select:
+
+   Other
+
+7. Browse and select the required Host OS folder.
+
+8. Enter a suitable folder name.
+
+9. Enable:
+
+   Auto-mount
+   Make permanent
+
+10. Click OK.
+
+11. Access the shared folder from the Guest OS.
+
+## FILE TRANSFER OPTIONS
+
+Copy/Paste / Drag and Drop
+Host → Guest
+Guest → Host
+Bidirectional
+
+USB Drive
+Host → USB → Guest
+
+Shared Folder
+Host Folder ↔ Guest OS
+
+## FINAL SETUP
+
+Virtualization : Oracle VM VirtualBox
+File Transfer  : Copy/Paste, USB, Shared Folder
+Guest Additions: Installed for Shared Folder
+USB Support    : Enabled when required
+Shared Folder  : Configured
+
+Status         : File transfer setup completed successfully.
