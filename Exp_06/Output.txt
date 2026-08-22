@@ -1,0 +1,36 @@
+# EXPERIMENT 06 - FILE TRANSFER BETWEEN VIRTUAL MACHINES
+
+## OUTPUT
+
+The file transfer methods between Virtual Machines were successfully
+configured and tested.
+
+The following methods were verified:
+
+1. Copy and Paste / Drag and Drop
+2. USB Drive
+3. Shared Folder
+
+For Drag and Drop, the transfer mode was configured as:
+
+```
+Bidirectional
+```
+
+The required VirtualBox Guest Additions were installed for using
+Shared Folders.
+
+A shared folder was created successfully and configured with:
+
+```
+Auto-mount
+Make permanent
+```
+
+Files were successfully transferred between the Virtual Machine
+environments.
+
+## RESULT
+
+Thus, the procedure to transfer files from one Virtual Machine to
+another Virtual Machine was successfully executed using VirtualBox.
