@@ -1,0 +1,47 @@
+# EXPERIMENT 04 - GAE LAUNCHER
+
+## OUTPUT
+
+The Google Cloud project was created and configured successfully.
+
+The Google Cloud SDK was installed and initialized.
+
+A web application was created with the following structure:
+
+```
+Project/
+|
++-- app.yaml
+|
++-- www/
+    |
+    +-- index.html
+    +-- css/
+    +-- images/
+    +-- js/
+```
+
+The `app.yaml` configuration file was created successfully.
+
+The Hello World web application was deployed using:
+
+```
+gcloud app deploy
+```
+
+The deployed application was launched successfully using:
+
+```
+gcloud app browse
+```
+
+The web application displayed the following output:
+
+```
+Hello, world!
+```
+
+## RESULT
+
+Thus, the **GAE Launcher was used successfully to deploy and launch
+the web application using Google App Engine.**
