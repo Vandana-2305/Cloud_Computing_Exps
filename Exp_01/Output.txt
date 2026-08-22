@@ -1,0 +1,24 @@
+# EXPERIMENT 01 - VIRTUAL WORKSTATION
+
+## OUTPUT
+
+Oracle VM VirtualBox was installed successfully on the Windows host
+machine.
+
+A Virtual Machine was created successfully with the following
+configuration:
+
+Host OS        : Windows 10
+Guest OS       : Windows 98
+Base Memory    : 512 MB
+Processor      : 1 CPU
+Virtual Disk   : 2.00 GB
+
+The Guest Operating System was installed successfully and the
+Windows 98 desktop was displayed inside the Virtual Machine.
+
+## RESULT
+
+Thus, the VirtualBox installation on the Windows host machine and
+the installation of Windows 98 as the Guest Operating System were
+completed successfully.
