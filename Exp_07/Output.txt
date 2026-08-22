@@ -1,0 +1,44 @@
+# EXPERIMENT 07 - HADOOP SINGLE NODE CLUSTER
+
+## OUTPUT
+
+Java was installed and verified successfully.
+
+The SSH server was installed and configured successfully.
+
+An RSA SSH key was generated and the public key was added to the
+authorized keys.
+
+The Hadoop group and user were created successfully.
+
+Hadoop 2.7.0 was extracted and configured successfully.
+
+The HDFS directories were created:
+
+```
+/var/lib/hadoop/hdfs/namenode
+/var/lib/hadoop/hdfs/datanode
+```
+
+The Hadoop environment variables were configured successfully.
+
+The following Hadoop configuration files were configured:
+
+```
+hadoop-env.sh
+core-site.xml
+yarn-site.xml
+mapred-site.xml
+hdfs-site.xml
+```
+
+The Hadoop Single Node Cluster was configured successfully.
+
+Simple Hadoop applications such as WordCount can be executed using
+the configured cluster.
+
+## RESULT
+
+Thus, the **Hadoop Single Node Cluster was successfully installed
+and configured, and the setup was verified for running simple
+Hadoop applications such as WordCount.**
