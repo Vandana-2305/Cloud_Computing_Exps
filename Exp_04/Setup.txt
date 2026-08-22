@@ -1,0 +1,135 @@
+# EXPERIMENT 04 - GAE LAUNCHER
+
+## SETUP REQUIREMENTS
+
+1. Google Cloud Console
+2. Google Cloud SDK
+3. Google App Engine
+4. Web Browser
+5. Text Editor
+6. Internet Connection
+
+## CLOUD PROJECT SETUP
+
+1. Create a new Cloud Console project or select an existing project.
+
+2. Note the Project ID.
+
+3. Open the project page in Google Cloud Console.
+
+## GOOGLE CLOUD SDK SETUP
+
+1. Download the Google Cloud SDK.
+
+2. Install the Google Cloud SDK.
+
+3. Initialize the SDK.
+
+4. Configure the required Cloud project.
+
+## APPLICATION DIRECTORY SETUP
+
+Create the following project structure:
+
+```
+Project/
+|
++-- app.yaml
+|
++-- www/
+    |
+    +-- index.html
+    |
+    +-- css/
+    |   |
+    |   +-- style.css
+    |
+    +-- images/
+    |
+    +-- js/
+```
+
+## APP.YAML SETUP
+
+Create `app.yaml` in the application root directory.
+
+Configuration:
+
+```
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: www/index.html
+  upload: www/index.html
+
+- url: /(.*)
+  static_files: www/\1
+  upload: www/(.*)
+```
+
+## INDEX.HTML SETUP
+
+Create `index.html` inside the `www` directory.
+
+The page should contain a simple Hello World message.
+
+Example:
+
+```
+<html>
+<head>
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <h1>Hello, world!</h1>
+</body>
+</html>
+```
+
+## DEPLOYMENT SETUP
+
+1. Open a terminal in the project root directory.
+
+2. Make sure that `app.yaml` is present in the current directory.
+
+3. Deploy the application using:
+
+   gcloud app deploy
+
+4. If required, specify the project:
+
+   gcloud app deploy --project YOUR_PROJECT_ID
+
+5. To specify a version:
+
+   gcloud app deploy -v YOUR_VERSION_ID
+
+## APPLICATION LAUNCH
+
+After successful deployment, launch the application using:
+
+```
+gcloud app browse
+```
+
+The application will open using the App Engine application URL:
+
+```
+https://PROJECT_ID.REGION_ID.r.appspot.com
+```
+
+## FINAL SETUP
+
+Platform        : Google App Engine
+SDK             : Google Cloud SDK
+Configuration   : app.yaml
+Web Directory   : www/
+Main Page       : index.html
+Deployment      : gcloud app deploy
+Launch Command  : gcloud app browse
+
+Status          : GAE Launcher setup completed successfully.
