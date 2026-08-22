@@ -1,0 +1,52 @@
+EXPERIMENT 09: RUN A CONTAINER FROM DOCKER HUB
+
+# OUTPUT
+
+Command:
+
+docker -h
+
+Output:
+
+Flag shorthand -h has been deprecated, please use --help
+
+Usage:
+docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Command:
+
+docker container run -it ubuntu top
+
+Output:
+
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+Pull complete
+Pull complete
+Pull complete
+Pull complete
+Digest: sha256:...
+Status: Downloaded newer image for ubuntu:latest
+
+The Ubuntu container starts successfully and the `top` command runs inside the container.
+
+Command:
+
+docker container ls
+
+Sample Output:
+
+CONTAINER ID   IMAGE    COMMAND               CREATED      STATUS
+d6777df89fea   nginx    "nginx -g 'daemon..." 3 minutes ago Up 3 minutes
+
+ead80a0db505   mongo    "docker-entrypoint..." 3 minutes ago Up 3 minutes
+
+af549dccd5cf   ubuntu   "top"                  8 minutes ago Up 8 minutes
+
+The lab manual shows an Ubuntu container running with the `top` command.
+
+# RESULT
+
+Thus, the program to run a container from Docker Hub was executed and verified successfully.
