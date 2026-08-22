@@ -1,0 +1,44 @@
+EXPERIMENT 08 - CREATING AND EXECUTING YOUR FIRST CONTAINER USING DOCKER
+========================================================================
+
+OUTPUT
+------
+
+Docker was installed successfully on the system.
+
+The Docker installation was verified using:
+
+    sudo docker run hello-world
+
+A project containing the following files was created:
+
+    Dockerfile
+    main.py
+
+The Python program was successfully added to `main.py`.
+
+The Dockerfile was configured using the Python base image:
+
+    FROM python:latest
+
+The Docker image was created successfully using:
+
+    docker build -t python-test .
+
+The Docker container was executed successfully using:
+
+    docker run python-test
+
+
+SAMPLE OUTPUT
+-------------
+
+Docker is magic!
+
+
+RESULT
+------
+
+Thus, the first Docker container was successfully created and
+executed, and the Python application was successfully run inside
+the Docker container.
